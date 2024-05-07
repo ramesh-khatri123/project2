@@ -18,34 +18,29 @@ document.getElementById("mobile-nav-toggle").addEventListener("click", function(
     });
 
 
-//back-to-top
-// Show the "Back to Top" button when user scrolls down
-window.onscroll = function() {
-    showBackToTopButton();
-};
+// script.js
 
-function showBackToTopButton() {
-    const button = document.querySelector('.back-to-top');
-    if (window.scrollY > 300) {
-        button.style.display = 'block';
+window.addEventListener('scroll', function() {
+    var backToTop = document.getElementById('back-to-top');
+    if (window.pageYOffset > 100) { // Adjust the value according to your needs
+        backToTop.style.display = 'block';
     } else {
-        button.style.display = 'none';
+        backToTop.style.display = 'none';
     }
-}
-
-// Smooth scroll to the top when the button is clicked
-document.querySelector('.back-to-top').addEventListener('click', function(e) {
-    e.preventDefault();
-    scrollToTop();
 });
 
-function scrollToTop() {
-    const scrollToTop = window.setInterval(function() {
-        const pos = window.pageYOffset;
-        if (pos > 0) {
-            window.scrollTo(0, pos - 20); // How far to scroll on each step
-        } else {
-            window.clearInterval(scrollToTop);
-        }
-    }, 16); // Run every 16ms (approximately 60fps)
+document.getElementById('back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    scrollToTop(500); // Adjust the duration of the scroll animation (in milliseconds)
+});
+
+function scrollToTop(scrollDuration) {
+    var scrollStep = -window.scrollY / (scrollDuration / 15),
+        scrollInterval = setInterval(function() {
+            if (window.scrollY !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 15);
 }
