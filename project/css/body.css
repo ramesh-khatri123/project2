@@ -1,0 +1,174 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background: linear-gradient(to right, #6fcdea, #55aab1); /* Gradient background */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-image: url('path/to/your/image.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+body {
+    padding: 20px;
+    text-align: left;
+    border-radius: 15px;
+    max-width: 1400px;
+    position: relative;
+    cursor: pointer;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 0;
+    }
+}
+
+/* Additional CSS features */
+/* Add a subtle box shadow to all elements */
+*, *::before, *::after {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a border box sizing to all elements */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Add a smooth transition effect to all elements */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Add a subtle hover effect to links */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+}
+
+/* Add a subtle border radius to images */
+img {
+    border-radius: 5px;
+}
+
+/* Add a subtle drop shadow to images */
+img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Additional CSS features */
+/* Add a subtle hover effect to buttons */
+button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Add a subtle border radius to buttons */
+button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add a subtle box shadow to buttons */
+button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle border radius to form inputs */
+input[type="text"], input[type="email"], textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Add a subtle box shadow to form inputs on focus */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Add a subtle border radius to buttons in footer */
+.footer button {
+    border-radius: 5px;
+}
+
+/* Add a subtle hover effect to links in footer */
+.footer a:hover {
+    color: #555;
+}
+
+/* Add a subtle drop shadow to header */
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle border radius to navigation links */
+nav a {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+
+/* Back-to-top button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.second-content p {
+    padding-left: 8px;
+}
+
+.first-content p {
+    padding-left: 8px;
+}
+
+.third-content li {
+    padding-left: 8;
+}
